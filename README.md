@@ -12,6 +12,7 @@ The dataset for this project was collection from the City of Buffalo data source
 
 IV. DATASET PREPROCESSING
 -------------------------
+Data Source is from goverment website: https://data.buffalony.gov/Government/Current-2021-2022-Assessment-Roll/4t8s-9yih
 In the 93653 data points, there is a major chunk of missing values in the dataset. The process of solving the missing values issue is split into three parts :
 
 ● For the columns with missing values in more than 80% of the rows: There are 11 columns with missing values in more than 72000 rows. Imputing with the null values would induce a bias in the data. The corresponding columns were dropped to solve the null values issue in this part. The dataset now has 73 features and 93653 rows.
