@@ -16,7 +16,9 @@ Data Source is from goverment website: https://data.buffalony.gov/Government/Cur
 In the 93653 data points, there is a major chunk of missing values in the dataset. The process of solving the missing values issue is split into three parts :
 
 ● For the columns with missing values in more than 80% of the rows: There are 11 columns with missing values in more than 72000 rows. Imputing with the null values would induce a bias in the data. The corresponding columns were dropped to solve the null values issue in this part. The dataset now has 73 features and 93653 rows.
+
 ● For the columns with missing values in less than 20% of the rows: There are approximately 5000 unique rows with columns having missing values in less than 20% of the rows. Dropping these rows will not affect the data as this is a small fraction compared to the entire dataset. So the dataset is now reduced to 73 features and 89457 rows.
+
 ● For the other columns: The missing values were imputed using the statistical values of the corresponding columns. For numerical columns, the null values were replaced with the median of the column. The median was chosen because imputing with mean would introduce a new value that’s not present in the dataset. Also, mean would result in a decimal value which might not be suitable for all data types. For categorical columns, the null values were replaced with the most frequently occurred value, i.e. mode of the column.
 
 VI. DATA MODELLING
